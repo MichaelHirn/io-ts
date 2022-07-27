@@ -1,43 +1,27 @@
-[![build status](https://img.shields.io/travis/gcanti/io-ts/master.svg?style=flat-square)](https://travis-ci.org/gcanti/io-ts)
-[![dependency status](https://img.shields.io/david/gcanti/io-ts.svg?style=flat-square)](https://david-dm.org/gcanti/io-ts)
-![npm downloads](https://img.shields.io/npm/dm/io-ts.svg)
+<h1 align="left">
+io-ts for <a href="https://github.com/denoland/deno">Deno 🦕</a>
+</h1>
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+[io-ts](https://github.com/gcanti/io-ts) is a library for _Runtime type system for IO decoding/encoding_ in TypeScript.
 
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Stable features](#stable-features)
-  - [Experimental features (version `2.2+`)](#experimental-features-version-22)
+Unfortunately io-ts is not available for Deno, because:
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+1. io-ts's Gcanti does not want to support Deno (yet)
+2. Esm.sh keeps breaking and doesn't support all types (Jul 2022)
+3. Skypack fails to support io-ts (Jul 2022)
 
-# Installation
+This repo is the first working Deno port I am aware of. Feel free to open an issue here if you experience any problems.
 
-To install the stable version
+[`fp-ts` for Deno is also available](https://github.com/michaelhirn/fp-ts).
 
-```sh
-npm i io-ts fp-ts
+# Installation / Usage
+
+> Note: This package is only available for version `io-ts@2.12.1` for now
+
+```ts
+import * as A from 'https://raw.githubusercontent.com/michaelhirn/io-ts/master/lib/Codec.ts'
 ```
 
-**Note**. [`fp-ts`](https://github.com/gcanti/fp-ts) is a peer dependency for `io-ts`
+## ToDo
 
-# Usage
-
-## Stable features
-
-- [`index.ts` module](index.md)
-
-## Experimental modules (version `2.2+`)
-
-Experimental modules (\*) are published in order to get early feedback from the community, see these tracking [issues](https://github.com/gcanti/io-ts/issues?q=label%3Av2.2+) for further discussions and enhancements.
-
-The experimental modules are **independent and backward-incompatible** with stable ones.
-
-- [`Decoder.ts` module](Decoder.md)
-- [`Encoder.ts` module](Encoder.md)
-- [`Codec.ts` module](Codec.md)
-- [`Eq.ts` module](Eq.md)
-- [`Schema.ts` module (advanced feature)](Schema.md)
-
-(\*) A feature tagged as _Experimental_ is in a high state of flux, you're at risk of it changing without notice.
+- [ ] setup [deno.land/x](https://deno.land/x) CI/CD
