@@ -16,10 +16,10 @@ This repo is the first working Deno port I am aware of. Feel free to open an iss
 
 # Installation / Usage
 
-> Note: This package is only available for version `io-ts@2.12.1` for now
+> Note: This package is only available for version `io-ts@2.2.16` for now
 
 ```ts
-import * as A from 'https://raw.githubusercontent.com/michaelhirn/io-ts/master/lib/Codec.ts'
+import * as COD from 'https://raw.githubusercontent.com/michaelhirn/io-ts/master/lib/Codec.ts'
 ```
 
 ## ToDo
